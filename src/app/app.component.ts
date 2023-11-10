@@ -6,7 +6,7 @@ import { SearchBarComponent } from "./search-bar/search-bar.component";
   template: `
     <div class="container">
       <div class="bg"></div>
-      <app-search-bar></app-search-bar>
+      <app-search-bar class="app-search"></app-search-bar>
     </div>
   `,
   styleUrls: ["./app.component.scss"],
