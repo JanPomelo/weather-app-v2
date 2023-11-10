@@ -1,16 +1,17 @@
 import { Component } from "@angular/core";
-
+import { SearchBarComponent } from "./search-bar/search-bar.component";
 @Component({
   standalone: true,
   selector: "app-root",
   template: `
     <div class="container">
       <div class="bg"></div>
-      <h1>Hello World!</h1>
+      <app-search-bar></app-search-bar>
     </div>
   `,
   styleUrls: ["./app.component.scss"],
+  imports: [SearchBarComponent]
 })
 export class AppComponent {
-  title = "homes";
+  title = "Cozy Weather";
 }
