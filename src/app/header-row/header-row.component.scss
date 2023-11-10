@@ -1,0 +1,39 @@
+@use "../../styles/mixins";
+
+
+
+
+
+.logo {
+  display: block;
+  background-image: url(//cdn.weatherapi.com/v4/images/weatherapi_logo.png);
+  background-repeat: no-repeat;
+  background-size: 4rem;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+.modeBut {
+  flex-grow: 1;
+  margin-right: 0.5rem;
+  padding: 0 0.25rem;
+  background-color: white;
+  width: 3rem;
+  font-size: 0.875rem;
+  border: 2px solid rgb(17 24 39);
+  border-radius: 0.75rem;
+}
+
+#iso {
+  border-top: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+#ansi {
+  border-bottom: 1px solid rgb(17 24 39);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+

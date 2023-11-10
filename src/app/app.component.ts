@@ -1,16 +1,17 @@
 import { Component } from "@angular/core";
-import { SearchBarComponent } from "./search-bar/search-bar.component";
+import { HeaderRowComponent } from "./header-row/header-row.component";
 @Component({
   standalone: true,
   selector: "app-root",
   template: `
     <div class="container">
       <div class="bg"></div>
-      <app-search-bar class="app-search"></app-search-bar>
+      <app-header-row class="md:flex md:justify-between md:flex-row-reverse w-full">
+      </app-header-row>
     </div>
   `,
   styleUrls: ["./app.component.scss"],
-  imports: [SearchBarComponent]
+  imports: [HeaderRowComponent],
 })
 export class AppComponent {
   title = "Cozy Weather";
