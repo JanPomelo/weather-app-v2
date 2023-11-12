@@ -7,7 +7,7 @@ import { WeatherData } from "src/Weather";
   selector: "app-data-container",
   standalone: true,
   imports: [CommonModule, GeneralInfoComponent, TodayInfoComponent],
-  template: ` <app-general-info [location]='weatherData.location'></app-general-info>
+  template: ` <app-general-info [weatherData]="weatherData"></app-general-info>
     <app-today-info></app-today-info>`,
   styleUrls: ["./data-container.component.css"],
 })
