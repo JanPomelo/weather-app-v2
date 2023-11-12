@@ -1,5 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, Input, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { WeatherData } from "src/Weather";
+import { WeatherService } from "../weather.service";
 
 @Component({
   selector: "app-general-info",
@@ -7,8 +9,8 @@ import { CommonModule } from "@angular/common";
   imports: [CommonModule],
   template: `
     <div class="flex flex-col text-white pl-3">
-      <h2 class="text-5xl font-bold">City</h2>
-      <h3 class="text-lg pl-6 mb-3 font-bold">Country</h3>
+      <h2 class="text-5xl font-bold">{{ location.name }}</h2>
+      <h3 class="text-lg pl-6 mb-3 font-bold">{{ location.country }}</h3>
       <div class="flex gap-2 items-center">
         <div class="flex text-xl items-center">
           <span class="pb-0.5 material-symbols-outlined">Keyboard_Double_Arrow_Down</span>
@@ -28,4 +30,6 @@ import { CommonModule } from "@angular/common";
   `,
   styleUrls: ["./general-info.component.css"],
 })
-export class GeneralInfoComponent {}
+export class GeneralInfoComponent {
+  @Input() location!: WeatherData["location"];
+}
