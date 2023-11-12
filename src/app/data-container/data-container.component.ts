@@ -4,12 +4,16 @@ import { GeneralInfoComponent } from "../general-info/general-info.component";
 import { TodayInfoComponent } from "../today-info/today-info.component";
 import { WeatherData } from "src/Weather";
 import { WeatherService } from "../weather.service";
+import { MoreInformationComponent } from "../more-information/more-information.component";
 @Component({
   selector: "app-data-container",
   standalone: true,
-  imports: [CommonModule, GeneralInfoComponent, TodayInfoComponent],
+  imports: [CommonModule, GeneralInfoComponent, TodayInfoComponent, MoreInformationComponent],
   template: ` <app-general-info [weatherService]="weatherService"></app-general-info>
-    <app-today-info [weatherService]="weatherService"></app-today-info>`,
+    <div class="flex flex-col gap-5">
+      <app-today-info [weatherService]="weatherService"></app-today-info>
+      <app-more-information [weatherService]="weatherService"> </app-more-information>
+    </div>`,
   styleUrls: ["./data-container.component.css"],
 })
 export class DataContainerComponent {
