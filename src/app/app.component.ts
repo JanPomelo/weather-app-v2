@@ -9,7 +9,8 @@ import { WeatherData, fakeWeather } from "src/Weather";
   template: `
     <div class="container">
       <div class="bg"></div>
-      <app-header-row class="md:flex md:justify-between md:flex-row-reverse w-full"> </app-header-row>
+      <app-header-row class="md:flex md:justify-between md:flex-row-reverse w-full" [weatherService]="weatherService">
+      </app-header-row>
       <app-data-container
         class="flex flex-col gap-3 md:grid md:grid-cols-2 px-3 overflow-scroll h-4/5 md:grow md:overflow-auto"
         [weatherService]="weatherService"
@@ -23,6 +24,7 @@ export class AppComponent {
   title = "Cozy Weather";
   weatherService: WeatherService = inject(WeatherService);
   weatherData: WeatherData = this.weatherService.currentWeather;
+  mode: string = this.weatherService.currentMode;
   constructor() {
     /*this.weatherService.getData("London").then(() => {
       this.weatherData = this.weatherService.currentWeather;

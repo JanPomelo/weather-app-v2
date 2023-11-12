@@ -8,6 +8,14 @@ import { request } from "src/fetchRequests";
 export class WeatherService {
   constructor() {}
   currentWeather: WeatherData = fakeWeather;
+  currentMode: string = "°C";
+
+  changeMode(butText: string) {
+    if (butText === this.currentMode) {
+      return;
+    }
+    this.currentMode = butText;
+  }
 
   async getData(place: string): Promise<WeatherData> {
     const url: string = `http://api.weatherapi.com/v1/forecast.json?key=381d192e0f6a4b4f82b42439232106&q=${place}&days=3&aqi=yes&alerts=no`;
