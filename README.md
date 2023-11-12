@@ -1,20 +1,4 @@
-# Angular Homes App
-- Install Angular if you don't have it installed
+# Weather App v2
 
-  `npm install -g @angular/cli`
-
-- Clone this branch to your local machine
-
-  `git clone -b homes-app-start git@github.com:angular/codelabs.git homes-app`
-
-- Once the code has been downloaded
-
-  `cd homes-app`
-
-- Install the depencies
-
-  `npm install` 
-
-- Run the application 
-
-  `ng serve`
+A short revamp of my weather website which I originally did with plain TypeScript.
+Since I want to get more familiar with Angular, I decided to redo this project with Angular as a good starting point.
