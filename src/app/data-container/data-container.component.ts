@@ -9,7 +9,7 @@ import { WeatherService } from "../weather.service";
   standalone: true,
   imports: [CommonModule, GeneralInfoComponent, TodayInfoComponent],
   template: ` <app-general-info [weatherService]="weatherService"></app-general-info>
-    <app-today-info></app-today-info>`,
+    <app-today-info [weatherService]="weatherService"></app-today-info>`,
   styleUrls: ["./data-container.component.css"],
 })
 export class DataContainerComponent {

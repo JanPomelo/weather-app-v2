@@ -1,6 +1,5 @@
-import { Component, Input, inject } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { WeatherData } from "src/Weather";
 import { WeatherService } from "../weather.service";
 
 @Component({
