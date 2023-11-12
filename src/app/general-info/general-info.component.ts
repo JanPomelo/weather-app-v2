@@ -14,12 +14,26 @@ import { WeatherService } from "../weather.service";
       <div class="flex gap-2 items-center">
         <div class="flex text-xl items-center">
           <span class="pb-0.5 material-symbols-outlined">Keyboard_Double_Arrow_Down</span>
-          <span>{{ weatherService.currentWeather.forecast.forecastday[0].day.mintemp_c }} °C</span>
+          <span>{{
+            weatherService.currentMode === "F"
+              ? weatherService.currentWeather.forecast.forecastday[0].day.mintemp_f + " F"
+              : weatherService.currentWeather.forecast.forecastday[0].day.mintemp_c + " °C"
+          }}</span>
         </div>
-        <p class="text-4xl">{{ weatherService.currentWeather.current.temp_c }} °C</p>
+        <p class="text-4xl">
+          {{
+            weatherService.currentMode === "F"
+              ? weatherService.currentWeather.current.temp_f + " F"
+              : weatherService.currentWeather.current.temp_c + " °C"
+          }}
+        </p>
         <div class="flex text-xl items-center">
           <span class="pb-0.5 material-symbols-outlined">Keyboard_Double_Arrow_Up</span>
-          <span>{{ weatherService.currentWeather.forecast.forecastday[0].day.maxtemp_c }} °C</span>
+          <span>{{
+            weatherService.currentMode === "F"
+              ? weatherService.currentWeather.forecast.forecastday[0].day.maxtemp_f + " F"
+              : weatherService.currentWeather.forecast.forecastday[0].day.maxtemp_c + " °C"
+          }}</span>
         </div>
       </div>
       <div class="flex gap-3 items-center">
