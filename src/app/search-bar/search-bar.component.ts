@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { WeatherData } from "src/Weather";
 import { request } from "src/fetchRequests";
-
+import { WeatherService } from "../weather.service";
 @Component({
   selector: "app-search-bar",
   standalone: true,
@@ -17,8 +17,11 @@ import { request } from "src/fetchRequests";
     <button
       class="px-2 rounded-r-3xl h-full w-10 bg-gray-200 inputBut"
       type="button"
+      (click)="weatherService.getData(getWeather.value)"
     ></button>
   `,
   styleUrls: ["./search-bar.component.scss"],
 })
-export class SearchBarComponent {}
+export class SearchBarComponent {
+  weatherService: WeatherService = inject(WeatherService);
+}
