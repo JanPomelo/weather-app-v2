@@ -15,6 +15,10 @@ export class WeatherService {
       method: "GET",
       mode: "cors",
     });
+    data!.forecast.forecastday[0].day.mintemp_c = Math.floor(data?.forecast.forecastday[0].day.mintemp_c as number);
+    data!.forecast.forecastday[0].day.mintemp_f = Math.floor(data?.forecast.forecastday[0].day.mintemp_f as number);
+    data!.forecast.forecastday[0].day.maxtemp_c = Math.floor(data?.forecast.forecastday[0].day.maxtemp_c as number);
+    data!.forecast.forecastday[0].day.maxtemp_f = Math.floor(data?.forecast.forecastday[0].day.maxtemp_f as number);
     return data as WeatherData;
   }
 }
