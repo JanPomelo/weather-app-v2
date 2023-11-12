@@ -132,6 +132,35 @@ export const fakeWeather: WeatherData = {
     feelslike_t: 43,
   },
   forecast: {
-    forecastday: [],
+    forecastday: [
+      {
+        date: "2023-12-11",
+        day: {
+          mintemp_c: 2,
+          mintemp_f: 324,
+          maxtemp_c: 32,
+          maxtemp_f: 340,
+          condition: {
+            text: "Partly Cloudy",
+            icon: "",
+            code: 1337,
+          },
+          air_quality: {
+            pm2_5: 3.6,
+          },
+          daily_chance_of_rain: 0,
+          daily_will_it_rain: false,
+          daily_chance_of_snow: 0,
+          daily_will_it_snow: false,
+          totalprecip_mm: 0,
+          totalsnow_mm: 0,
+        },
+        astro: {
+          sunrise: "",
+          sunset: "",
+        },
+        hour: [],
+      },
+    ],
   },
 };
