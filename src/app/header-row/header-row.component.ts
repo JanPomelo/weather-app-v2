@@ -39,7 +39,9 @@ import { WeatherService } from "../weather.service";
     </div>
     <div class="text-white flex text-sm justify-between px-4 items-center md:justify-start md:gap-2 h-12 mt-2 md:mt-0">
       <p>Powered by <a href="https://www.weatherapi.com">WeatherAPI.com</a></p>
-      <a href="https://www.weatherapi.com/" class="bg-white/50 w-20 h-12 rounded-lg logo"></a>
+      <a href="https://www.weatherapi.com/" class="bg-white/50 w-20 h-12 rounded-lg logo text-transparent"
+        >WeatherAPI</a
+      >
     </div>
   `,
   styleUrls: ["./header-row.component.scss"],

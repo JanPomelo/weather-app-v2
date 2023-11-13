@@ -10,7 +10,7 @@ import { WeatherService } from "../weather.service";
   template: `
     <p>{{ hour.time.substring(10, 13) }}</p>
     <div class="flex flex-col mb-1 w-12 items-center">
-      <img [src]="hour.condition.icon" class="w-[3rem]" />
+      <img [src]="hour.condition.icon" class="w-[3rem]" [alt]="hour.condition.text" />
       <p class="h-5 text-sm">
         {{ hour.will_it_snow ? hour.chance_of_snow + " %" : hour.will_it_rain ? hour.chance_of_rain + " %" : "" }}
       </p>
