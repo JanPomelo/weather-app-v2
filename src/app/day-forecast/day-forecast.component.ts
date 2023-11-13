@@ -11,8 +11,8 @@ import { HourlyInfoComponent } from "../hourly-info/hourly-info.component";
     <div class="flex gap-3 overflow-scroll xl:overflow-auto px-5 rounded-xl text-white">
       <app-hourly-info
         *ngFor="let hour of forecastDay.hour"
-        [hour]="hour"
-        class="flex flex-col my-3 p-1 rounded-lg font-bold items-center"
+        [hour]="hour" [weatherService]="weatherService" 
+        class="flex flex-col my-3 p-1 rounded-lg font-bold items-center w-[3.5rem]"
       ></app-hourly-info>
     </div>
   `,
@@ -20,5 +20,6 @@ import { HourlyInfoComponent } from "../hourly-info/hourly-info.component";
 })
 export class DayForecastComponent {
   @Input() forecastDay!: WeatherService["currentWeather"]["forecast"]["forecastday"][0];
+  @Input() weatherService!: WeatherService;
   @Input() day!: string;
 }
