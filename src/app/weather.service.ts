@@ -45,34 +45,36 @@ export class WeatherService {
       },
     },
     forecast: {
-      forecastday: [{
-        date: '',
-        astro: {
-          sunrise: '',
-          sunset: '',
-        },
-        day: {
-          maxtemp_c: 0,
-          maxtemp_f: 0,
-          mintemp_c: 0,
-          mintemp_f: 0,
-          condition: {
-            code: 0,
-            text: '',
-            icon: ''
+      forecastday: [
+        {
+          date: "",
+          astro: {
+            sunrise: "",
+            sunset: "",
           },
-          air_quality: {
-            pm2_5: 0
+          day: {
+            maxtemp_c: 0,
+            maxtemp_f: 0,
+            mintemp_c: 0,
+            mintemp_f: 0,
+            condition: {
+              code: 0,
+              text: "",
+              icon: "",
+            },
+            air_quality: {
+              pm2_5: 0,
+            },
+            daily_chance_of_rain: 0,
+            daily_chance_of_snow: 0,
+            daily_will_it_rain: false,
+            daily_will_it_snow: false,
+            totalprecip_mm: 0,
+            totalsnow_mm: 0,
           },
-          daily_chance_of_rain: 0,
-          daily_chance_of_snow: 0,
-          daily_will_it_rain: false,
-          daily_will_it_snow: false,
-          totalprecip_mm: 0,
-          totalsnow_mm: 0,
+          hour: [],
         },
-        hour: []
-      }],
+      ],
     },
   };
   currentMode: string = "°C";
@@ -87,7 +89,7 @@ export class WeatherService {
   }
 
   async getData(place: string = ""): Promise<WeatherData> {
-    const url: string = `http://api.weatherapi.com/v1/forecast.json?key=381d192e0f6a4b4f82b42439232106&q=${place}&days=3&aqi=yes&alerts=no`;
+    const url: string = `https://api.weatherapi.com/v1/forecast.json?key=381d192e0f6a4b4f82b42439232106&q=${place}&days=3&aqi=yes&alerts=no`;
     const data: WeatherData | undefined = await request<WeatherData>(url, {
       method: "GET",
       mode: "cors",
