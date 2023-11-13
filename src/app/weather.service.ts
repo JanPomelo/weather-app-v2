@@ -19,22 +19,17 @@ export class WeatherService {
   }
 
   async getData(place: string = ""): Promise<WeatherData> {
-    /*const url: string = `http://api.weatherapi.com/v1/forecast.json?key=381d192e0f6a4b4f82b42439232106&q=${place}&days=3&aqi=yes&alerts=no`;
+    const url: string = `http://api.weatherapi.com/v1/forecast.json?key=381d192e0f6a4b4f82b42439232106&q=${place}&days=3&aqi=yes&alerts=no`;
     const data: WeatherData | undefined = await request<WeatherData>(url, {
       method: "GET",
       mode: "cors",
     });
-    */
-    const url: string = "http://localhost:3000/all";
-    const data1 = await fetch(url);
-    return await data1.json();
 
-    /*data!.forecast.forecastday[0].day.mintemp_c = Math.floor(data?.forecast.forecastday[0].day.mintemp_c as number);
+    data!.forecast.forecastday[0].day.mintemp_c = Math.floor(data?.forecast.forecastday[0].day.mintemp_c as number);
     data!.forecast.forecastday[0].day.mintemp_f = Math.floor(data?.forecast.forecastday[0].day.mintemp_f as number);
     data!.forecast.forecastday[0].day.maxtemp_c = Math.floor(data?.forecast.forecastday[0].day.maxtemp_c as number);
     data!.forecast.forecastday[0].day.maxtemp_f = Math.floor(data?.forecast.forecastday[0].day.maxtemp_f as number);
     this.currentWeather = data as WeatherData;
     return data as WeatherData;
-    */
   }
 }
