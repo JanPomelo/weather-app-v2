@@ -16,7 +16,10 @@ import { ForecastComponent } from "../forecast/forecast.component";
       <app-today-info [weatherService]="weatherService"></app-today-info>
       <app-more-information [weatherService]="weatherService" class="flex flex-col gap-1"></app-more-information>
     </div>
-    <app-forecast class="flex flex-col gap-1 border-t-4 border-white md:border-0 md:col-span-2"></app-forecast>
+    <app-forecast
+      class="flex flex-col gap-1 border-t-4 border-white md:border-0 md:col-span-2"
+      [weatherService]="weatherService"
+    ></app-forecast>
   `,
   styleUrls: ["./data-container.component.css"],
 })

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { WeatherService } from '../weather.service';
 @Component({
   selector: 'app-day-forecast',
   standalone: true,
@@ -13,5 +13,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./day-forecast.component.css']
 })
 export class DayForecastComponent {
-
+  @Input() weatherService!: WeatherService
 }
