@@ -26,7 +26,7 @@ export class AppComponent {
   weatherData: WeatherData = this.weatherService.currentWeather;
   mode: string = this.weatherService.currentMode;
   constructor() {
-    this.weatherService.getData().then((data: WeatherData) => {
+    this.weatherService.getData("Bangkok").then((data: WeatherData) => {
       this.weatherService.currentWeather = data;
       this.weatherData = this.weatherService.currentWeather;
     });

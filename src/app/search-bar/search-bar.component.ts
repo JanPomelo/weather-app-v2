@@ -1,7 +1,5 @@
 import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { WeatherData } from "src/Weather";
-import { request } from "src/fetchRequests";
 import { WeatherService } from "../weather.service";
 @Component({
   selector: "app-search-bar",
@@ -13,6 +11,7 @@ import { WeatherService } from "../weather.service";
       class="grow md:grow-0 rounded-l-3xl pl-4 text-xl h-full w-[190px] lg:w-96 text-black"
       placeholder="Type in Location"
       #getWeather
+      (keypress)="enterPress($event, getWeather.value)"
     />
     <button
       class="px-2 rounded-r-3xl h-full w-10 bg-gray-200 inputBut"
@@ -24,4 +23,10 @@ import { WeatherService } from "../weather.service";
 })
 export class SearchBarComponent {
   weatherService: WeatherService = inject(WeatherService);
+
+  enterPress(e: any, input: string) {
+    if (e.key === "Enter") {
+      this.weatherService.getData(input);
+    }
+  }
 }
