@@ -15,7 +15,6 @@ import { WeatherService } from "../weather.service";
         [forecastDay]="foreCastDay"
         [weatherService]="weatherService"
         class="flex flex-col gap-1 rounded-xl bg-black bg-opacity-30 gap-x-2 my-3 xl:mr-auto"
-        day="Today"
       ></app-day-forecast>
     </div>
   `,
