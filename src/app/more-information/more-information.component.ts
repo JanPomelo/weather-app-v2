@@ -22,7 +22,7 @@ import { WeatherService } from "../weather.service";
       <p class="text-lg font-bold">{{ weatherService.currentWeather.current.humidity }} %</p>
       <p class="text-lg font-bold">Wind Direction</p>
       <p class="text-lg font-bold">
-        {{ weatherService.currentWeather.current.wind_dir }}
+        {{ translateWindDir(weatherService.currentWeather.current.wind_dir) }}
       </p>
       <p class="font-bold text-lg">Wind Speed</p>
       <p class="font-bold text-lg">
@@ -93,5 +93,23 @@ export class MoreInformationComponent {
     } else {
       this.extend(nav, context);
     }
+  }
+
+  translateWindDir(shortVersion: string) {
+    const windDirTranslate = [
+      { short: "N", long: "North" },
+      { short: "E", long: "East" },
+      { short: "W", long: "West" },
+      { short: "S", long: "South" },
+    ];
+    let longWindDir: string = "";
+    for (let i = 0; i < shortVersion.length; i++) {
+      for (let j = 0; j < windDirTranslate.length; j++) {
+        if (shortVersion.substring(i, i + 1) === windDirTranslate[j].short) {
+          longWindDir = longWindDir.concat(windDirTranslate[j].long, "-");
+        }
+      }
+    }
+    return longWindDir.substring(0, longWindDir.length - 1);
   }
 }

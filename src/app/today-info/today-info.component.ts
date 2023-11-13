@@ -17,7 +17,7 @@ import { WeatherService } from "../weather.service";
         <p class="font-bold text-lg">Air Quality PM 2.5</p>
         <p class="font-bold text-lg">{{ weatherService.currentWeather.current.air_quality.pm2_5 }}</p>
         <p class="font-bold text-lg">Local Time</p>
-        <p class="font-bold text-lg">{{ weatherService.currentWeather.location.localtime }}</p>
+        <p class="font-bold text-lg">{{ weatherService.currentWeather.location.localtime.substring(10) }}</p>
         <p class="font-bold text-lg">Sunrise / Sunset</p>
         <div class="font-bold text-lg flex items-center flex-wrap">
           <span class="material-symbols-outlined text-sm">Sunny</span>
