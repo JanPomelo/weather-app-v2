@@ -9,7 +9,7 @@ import { WeatherService } from "../weather.service";
   template: `
     <div class="flex gap-1">
       <h3 class="text-white font-bold text-2xl pl-3">More Information</h3>
-      <button class="material-symbols-outlined bg-transparent text-white text-3xl" #nav (click)="onClick(nav, context)">
+      <button class="material-symbols-outlined bg-transparent text-white text-3xl rounded-[50%] w-8 h-8" #nav (click)="onClick(nav, context)">
         keyboard_arrow_down
       </button>
     </div>
