@@ -36,7 +36,7 @@ import { WeatherService } from "../weather.service";
       <p class="text-lg font-bold">{{ weatherService.currentWeather.current.pressure_mb }} mbar</p>
     </div>
   `,
-  styleUrls: ["./more-information.component.css"],
+  styleUrls: ["./more-information.component.scss"],
 })
 export class MoreInformationComponent {
   @Input() weatherService!: WeatherService;

@@ -41,7 +41,7 @@ import { WeatherService } from "../weather.service";
       </div>
     </div>
   `,
-  styleUrls: ["./general-info.component.css"],
+  styleUrls: ["./general-info.component.scss"],
 })
 export class GeneralInfoComponent {
   @Input() weatherService!: WeatherService;

@@ -28,7 +28,7 @@ import { WeatherService } from "../weather.service";
       </div>
     </div>
   `,
-  styleUrls: ["./today-info.component.css"],
+  styleUrls: ["./today-info.component.scss"],
 })
 export class TodayInfoComponent {
   @Input() weatherService!: WeatherService;

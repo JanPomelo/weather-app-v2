@@ -21,7 +21,7 @@ import { ForecastComponent } from "../forecast/forecast.component";
       [weatherService]="weatherService"
     ></app-forecast>
   `,
-  styleUrls: ["./data-container.component.css"],
+  styleUrls: ["./data-container.component.scss"],
 })
 export class DataContainerComponent {
   @Input() weatherService!: WeatherService;

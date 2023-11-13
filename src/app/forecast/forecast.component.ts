@@ -14,11 +14,11 @@ import { WeatherService } from "../weather.service";
         *ngFor="let foreCastDay of weatherService.currentWeather.forecast.forecastday"
         [forecastDay]="foreCastDay"
         [weatherService]="weatherService"
-        class="flex flex-col gap-1 rounded-xl bg-black bg-opacity-30 gap-x-2 my-3 xl:mr-auto"
+        class="flex flex-col gap-1 rounded-xl bg-black bg-opacity-30 gap-x-2 my-3"
       ></app-day-forecast>
     </div>
   `,
-  styleUrls: ["./forecast.component.css"],
+  styleUrls: ["./forecast.component.scss"],
 })
 export class ForecastComponent {
   @Input() weatherService!: WeatherService;
