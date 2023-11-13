@@ -26,10 +26,10 @@ export class AppComponent {
   weatherData: WeatherData = this.weatherService.currentWeather;
   mode: string = this.weatherService.currentMode;
   constructor() {
-    /*this.weatherService.getData("London").then(() => {
+    this.weatherService.getData().then((data: WeatherData) => {
+      this.weatherService.currentWeather = data;
       this.weatherData = this.weatherService.currentWeather;
     });
-    */
-    this.weatherData = fakeWeather;
+    //this.weatherData = fakeWeather;
   }
 }
