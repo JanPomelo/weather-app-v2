@@ -14,11 +14,10 @@ import { WeatherService } from "../weather.service";
       (keypress)="enterPress($event, getWeather.value)"
     />
     <button
-      class="px-2 rounded-r-3xl h-full w-10 bg-gray-200  material-symbols-outlined text-black"
+      class="px-2 rounded-r-3xl h-full w-10 bg-gray-200 text-transparent inputBut"
       type="button"
       (click)="weatherService.getData(getWeather.value)"
     >
-      search
     </button>
   `,
   styleUrls: ["./search-bar.component.scss"],

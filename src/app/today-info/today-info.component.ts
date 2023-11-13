@@ -20,9 +20,9 @@ import { WeatherService } from "../weather.service";
         <p class="font-bold text-lg">{{ weatherService.currentWeather.location.localtime.substring(10) }}</p>
         <p class="font-bold text-lg">Sunrise / Sunset</p>
         <div class="font-bold text-lg flex items-center flex-wrap">
-          <span class="material-symbols-outlined text-sm">Sunny</span>
+          <span class="text-sm sunup h-6 w-6"></span>
           <span class="mr-3">{{ weatherService.currentWeather.forecast.forecastday[0].astro.sunrise }}</span>
-          <span class="material-symbols-outlined text-sm">wb_twilight</span>
+          <span class="text-sm sundown h-6 w-6"></span>
           <span>{{ weatherService.currentWeather.forecast.forecastday[0].astro.sunset }}</span>
         </div>
       </div>

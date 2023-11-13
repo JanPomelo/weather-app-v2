@@ -9,8 +9,12 @@ import { WeatherService } from "../weather.service";
   template: `
     <div class="flex gap-1">
       <h3 class="text-white font-bold text-2xl pl-3">More Information</h3>
-      <button class="material-symbols-outlined bg-transparent text-white text-3xl rounded-[50%] w-8 h-8" #nav (click)="onClick(nav, context)">
-        keyboard_arrow_down
+      <button
+        class="bg-transparent text-3xl rounded-[50%] w-8 h-8 text-transparent overflow-hidden butti"
+        #nav
+        (click)="onClick(nav, context)"
+      >
+        expand
       </button>
     </div>
     <div
@@ -46,8 +50,23 @@ export class MoreInformationComponent {
   }
 
   extend(nav: HTMLElement, context: HTMLElement): void {
-    nav.innerText = "keyboard_arrow_up";
     this.extended = true;
+    nav.animate(
+      [
+        {
+          transform: 'rotate(0deg)',
+        },
+        {
+          transform: "rotate(180deg)",
+        },
+      ],
+      {
+        iterations: 1,
+        duration: 500,
+        easing: "ease-in",
+        fill: "forwards",
+      }
+    );
     context.animate(
       [
         {
@@ -68,7 +87,22 @@ export class MoreInformationComponent {
 
   disappear(nav: HTMLElement, context: HTMLElement): void {
     this.extended = false;
-    nav.innerText = "keyboard_arrow_down";
+    nav.animate(
+      [
+        {
+          transform: "rotate(180deg)",
+        },
+        {
+          transform: "rotate(0deg)",
+        },
+      ],
+      {
+        iterations: 1,
+        duration: 500,
+        easing: "ease-in",
+        fill: "forwards",
+      }
+    );
     context.animate(
       [
         {

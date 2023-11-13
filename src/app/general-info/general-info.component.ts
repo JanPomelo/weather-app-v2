@@ -12,7 +12,7 @@ import { WeatherService } from "../weather.service";
       <h3 class="text-lg pl-6 mb-3 font-bold">{{ weatherService.currentWeather.location.country }}</h3>
       <div class="flex gap-2 items-center">
         <div class="flex text-xl items-center">
-          <span class="pb-0.5 material-symbols-outlined">Keyboard_Double_Arrow_Down</span>
+          <span class="pb-0.5 w-8 h-8 tempHigh"></span>
           <span>{{
             weatherService.currentMode === "F"
               ? weatherService.currentWeather.forecast.forecastday[0].day.mintemp_f + " F"
@@ -27,7 +27,7 @@ import { WeatherService } from "../weather.service";
           }}
         </p>
         <div class="flex text-xl items-center">
-          <span class="pb-0.5 material-symbols-outlined">Keyboard_Double_Arrow_Up</span>
+          <span class="pb-0.5 w-8 h-8 tempLow"></span>
           <span>{{
             weatherService.currentMode === "F"
               ? weatherService.currentWeather.forecast.forecastday[0].day.maxtemp_f + " F"

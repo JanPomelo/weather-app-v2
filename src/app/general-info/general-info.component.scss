@@ -1,0 +1,13 @@
+.tempHigh {
+  background-image: url(../../assets/double_up.svg);
+  background-position: center;
+  background-size: contain;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(64deg) brightness(104%) contrast(101%);
+}
+
+.tempLow {
+  background-image: url(../../assets/double_down.svg);
+  background-position: center;
+  background-size: contain;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(64deg) brightness(104%) contrast(101%);
+}

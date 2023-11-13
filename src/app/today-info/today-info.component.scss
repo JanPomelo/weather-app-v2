@@ -1,0 +1,12 @@
+.sundown {
+  background-image: url(../../assets/sundown.svg);
+  background-position: center;
+  background-size: contain;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(64deg) brightness(104%) contrast(101%);
+}
+.sunup {
+  background-image: url(../../assets/sunny.svg);
+  background-position: center;
+  background-size: contain;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(64deg) brightness(104%) contrast(101%);
+}
