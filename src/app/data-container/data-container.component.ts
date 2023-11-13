@@ -12,7 +12,7 @@ import { MoreInformationComponent } from "../more-information/more-information.c
   template: ` <app-general-info [weatherService]="weatherService"></app-general-info>
     <div class="flex flex-col gap-5">
       <app-today-info [weatherService]="weatherService"></app-today-info>
-      <app-more-information [weatherService]="weatherService"> </app-more-information>
+      <app-more-information [weatherService]="weatherService" class="flex flex-col gap-1"></app-more-information>
     </div>`,
   styleUrls: ["./data-container.component.css"],
 })
